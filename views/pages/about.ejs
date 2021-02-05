@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">State</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+        <%citiesList.forEach(city => {%>
+            <tr>
+                <th scope="row"> <%= city._id %></th>
+                <td><%= city.Name %></td>
+                <td><%= city.State %></td>
+              >
+            </tr>
+        <%})%>
+        </tbody>
+      </table>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

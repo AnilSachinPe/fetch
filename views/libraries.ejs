@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Informatics</h2>
+        <p>Remote Log Libraries list</p>            
+        <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">IsArchived</th>
+            <th scope="col">UniversityName</th>
+            <th scope="col">Disclaimer</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+                      
+          </tr>
+        </thead>
+        <tbody>
+        <%librariesList.forEach(library => {%>
+            <tr>
+                <th scope="row"> <%= library._id %></th>
+                <td><%= library.IsArchived %></td>
+                <td><%= library.UniversityName %></td>
+                <td><%= library.Disclaimer %></td>
+                <td><%= library.Name %></td>
+                <td><%= library.Email %></td>
+                <td><%= library.Phone %></td>
+                <td><%= library.Address %></td>
+              >
+            </tr>
+        <%})%>
+        </tbody>
+      </table>
+      </div>
+</body>
+</html>
